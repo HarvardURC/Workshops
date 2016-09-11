@@ -44,7 +44,7 @@ We strongly recommend using a mouse to navigate SolidWorks.
 
 19. On the top toolbar, click on "Hole Wizard." It will prompt you to choose a face on which to construct the hole. Select the vertical end currently in your view.
 
-20. On the left-hand side, select "Tapped Hole" and set the thread sizes to be ANSI-inch. Then, select the option of "10-32".
+20. On the left-hand side, select "Straight tap" and set the thread sizes to be ANSI-inch. Then, select the option of "10-32".
 
 21. Set the depth of the hole to be 0.5"
 
