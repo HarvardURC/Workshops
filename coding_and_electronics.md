@@ -65,7 +65,7 @@ Figure 0.4: A capacitor and resistor in parallel
 
 1. Build the circuit in Figure 0.3 and watch the LED come to life. Break the circuit and add another resistor in series (you should now have an LED in series with a resistor in series with another resistor). What happened to the brightness of the LED?
 
-2. Kirchhoff's current law may be just as important as Ohms law in circuit analysis. It basically means that the amount of current entering a junction is equal to the current exiting the junction. That is Σ I = 0. In simpler terms, this law says that the amount of current entering a set of parallel components does not have to be equal; current splits. Voltage on the other hand is split evenly. Thus, the power that a certain component gets is affected by whether or not it is in series with something else. Build the circuit in Figure 0.5. Now what happened to the brightness of the LED?
+2. Kirchhoff's current law may be just as important as Ohms law in circuit analysis. It basically means that the amount of current entering a junction is equal to the current exiting the junction. That is Σ I = 0. In simpler terms, this law says that the amount of current entering a set of parallel components does not have to be equal; current splits. Voltage on the other hand is the same. Thus, the power that a certain component gets is affected by whether or not it is in series with something else. Build the circuit in Figure 0.5. Now what happened to the brightness of the LED?
 
 ![An LED in parallel with 2 resistors in series](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.5.jpg)  
 Figure 0.5: An LED in parallel with 2 resistors in series
@@ -192,7 +192,7 @@ void setup () {
 }
 
 void loop () {
-  Serial.print("*");
+  Serial.print("#");
 }
 ```
 
