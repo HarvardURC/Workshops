@@ -107,8 +107,6 @@ Figure 0.8: A standard voltage divider
 
 3. Now return R1 to its original value and replace R2 with a value 100 times bigger than R1. What is the voltage drop across AB?
 
-4. Now replace both R1 and R2 with a potentiometer such that you still end up with a voltage divider. Make sure that you still have an LED in parallel with the lower half of the potentiometer. Turn the potentiometer slowly from one end to the other. What happens to the LED? When is it brightest? When is it dimmest (or even off)?
-
 As you have probably guessed by now, there is a linear relationship between the input voltage and output voltage, where the resistance are the slope. From our observations of the output voltage and the LED, we can see that when R2 » R1, the output voltage is highest, and when R1 » R2 the output voltage is lowest. The formula for a voltage divider circuit is the following: Vout = Vin * R2/(R1+R2).
 
 ### Coding
