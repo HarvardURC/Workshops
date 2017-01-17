@@ -6,7 +6,7 @@ Welcome to the Harvard Undergraduate Robotics Club's Wintersession workshops! Ov
 ### Getting Started
 
 ### What if I'm a Solidworks Noob?
-That's fine! If you haven't used SolidWorks before, follow the steps below to complete an example project to gain some familiarity. If you are comfortable with Solidworks, skip to the next section.
+That's fine! If you haven't used SolidWorks before, follow the steps below to complete an example project to gain some familiarity. If you are comfortable with Solidworks, skip to the next [section](#building-your-robot-chassis).
 
 1. Open SolidWorks by clicking on the appropriate icon on the desktop.
 
@@ -56,7 +56,7 @@ That's fine! If you haven't used SolidWorks before, follow the steps below to co
 
 24. You are done with this part! Create a new folder called "HURC tutorial_YOUR NAME" on the Desktop and save the part in that folder with the file name of "Door stop 1"
 
-### Building your Robot Chassis
+### Building Your Robot Chassis
 
 ## Part Two: Circuits and Coding
 ### Getting Started
@@ -87,14 +87,14 @@ The first thing you need to know before getting started are the components most 
 5. Capacitors - Capacitors act like buckets for electricity; they store charge and can thus be used as temporary and small batteries (as well as producing some other useful phenomenon). Some capacitors, like LEDs, are polarized and will only work if placed in circuit in the correct orientation (these will be clearly marked). **Please make sure a polarized capacitor is plugged in correctly. They will explode if the polarization is reversed!**
 
 ![Components](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.1.jpg)  
-Figure 0.1: The components we’ll be working with
+Figure 1.1: The components we’ll be working with
 
 #### Breadboarding
 
 The next important step is learning the layout of the breadboard. A breadboard is a tool made for the quick prototyping of circuits. It is easy to build circuits, and fix mistakes because components and wires are stuck into the sockets of a breadboard rather than being soldered together permanently. Figure 0.2 shows the layout of an example breadboard. From the image you can see that if a breadboard is held vertically, the rows in the middle are connected together and essentially act as a single point. Similarly, the columns to the left and right of the breadboard are connected together. The rows are where you will be connecting most of your components and the columns are usually used for power and ground.
 
 ![A breadboard](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.2.jpg)  
-Figure 0.2: A standard breadboard
+Figure 1.2: A standard breadboard
 
 In this section, we will review the basic building blocks of an Arduino sketch (the common name of an Arduino program), and work through several examples that will highlight these ideas. Our main reference for this section will be the official Arduino reference, which can be found [here](http://arduino.cc/en/Reference/HomePage). It is probably a lot to take in at once, but this page will probably answer any questions you might have about the syntax of the arduino language.
 
@@ -107,26 +107,26 @@ Ohm's Law is as follows: V = I * R, where V is voltage, I is current and R is re
 Looking at the schematic in Figure 0.3 you can see that the LED and resistor are in series in the circuit diagram. As you can see on the breadboard to the right, components in series need to share at least one row. The row allows for one component to conduct to another.
 
 ![A circuit in series](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.3.png)  
-Figure 0.3: An LED and resistor in series
+Figure 1.3: An LED and resistor in series
 
 Looking at the schematic in Figure 0.4 you can see that the resistor and capacitor are in parallel in the circuit diagram. As you can see on the breadboard on the right, components in parallel need to share both rows as points of contact. When components share rows in this way, current must flow into both of them at the same time, this making the connection a parallel one.
 
 ![A circuit in parallel](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.4.png)  
-Figure 0.4: A capacitor and resistor in parallel
+Figure 1.4: A capacitor and resistor in parallel
 
 #### Measuring resistance, voltage and current
 
 A multimeter is used to measure the V, I, and R -values at certain points in a circuit. Instead of using multiple separate devices, you can simply turn the dial on a multimeter to turn it into a voltmeter, ammeter or some other measurement device. The way multimeters measure voltage, current, and resistance are fundamentally different. A voltmeter must be placed in parallel to what you want to measure in order to find the voltage. An ammeter on the other hand must be placed in series with the circuit; the best way to do so is to pretend that it is another resistor. In Figure 0.7 you can see how a voltmeter and ammeter are placed properly in order to measure voltage or current. In order to measure the resistance of an element, you have to connect the multimeter in parallel to the component, similarly to how you would measure voltage.
 
 ![How to properly connect a voltmeter and ammeter](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.7.png)  
-Figure 0.7: How to properly connect a voltmeter and ammeter
+Figure 1.5: How to properly connect a voltmeter and ammeter
 
 #### Voltage Divider
 
 An important consequence of the voltage drop is that it can be used to control a circuit precisely. The so-called voltage divider circuit uses this phenomenon to create an output voltage of our choosing. See Figure 0.8 for an example of a generic voltage divider circuit.
 
 ![A standard voltage divider](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.8.jpg)  
-Figure 0.8: A standard voltage divider
+Figure 1.6: A standard voltage divider
 
 ### A Briefer Introduction to Servo Motors
 
@@ -234,7 +234,8 @@ As a final note, here are some links to documentation you may find helpful for c
 4. [AnalogRead](https://www.arduino.cc/en/Reference/AnalogRead)
 
 For your reference, we have included a pinout diagram for the Arduino Uno.
-![Pinout Diagram for the Arduino Uno R3](https://raw.githubusercontent.com/HarvardURC/Workshops/master/Wintersession/assets/uno_pinout.jpg)
+![pinout uno](https://raw.githubusercontent.com/HarvardURC/Workshops/master/Wintersession/assets/uno_pinout.jpg)
+Figure(): Pinout Diagram for the Arduino Uno R3
 
 ### Your Circuit Doesn't Work! A Quick Note on Debugging.
 
