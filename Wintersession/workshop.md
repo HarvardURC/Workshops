@@ -65,21 +65,19 @@ Figure 0.4: A capacitor and resistor in parallel
 
 #### Measuring resistance, voltage and current
 
-A multimeter is used to measure the V, I, and R -values at certain points in a circuit. Instead of using multiple separate devices, you can simply turn the dial on a multimeter to turn it into a voltmeter, ammeter or some other measurement device. The way multimeters measure voltage, current, and resistance are fundamentally different. A voltmeter must be placed in parallel to what you want to measure in order to find the voltage. An ammeter on the other hand must be placed in series with the circuit; the best way to do so is to pretend that it is another resistor. In Figure 0.7 you can see how a voltmeter and ammeter are placed properly in order to measure voltage or current. In order to measure the resistance of an element, you have to connect the multimeter in parallel to the component, Similarly to how you would measure voltage.
+A multimeter is used to measure the V, I, and R -values at certain points in a circuit. Instead of using multiple separate devices, you can simply turn the dial on a multimeter to turn it into a voltmeter, ammeter or some other measurement device. The way multimeters measure voltage, current, and resistance are fundamentally different. A voltmeter must be placed in parallel to what you want to measure in order to find the voltage. An ammeter on the other hand must be placed in series with the circuit; the best way to do so is to pretend that it is another resistor. In Figure 0.7 you can see how a voltmeter and ammeter are placed properly in order to measure voltage or current. In order to measure the resistance of an element, you have to connect the multimeter in parallel to the component, similarly to how you would measure voltage.
 
 ![How to properly connect a voltmeter and ammeter](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.7.png)  
 Figure 0.7: How to properly connect a voltmeter and ammeter
 
 #### Voltage Divider
 
-An important consequence of the voltage drop is that it can be used to control a circuit precisely and towards our needs. The so-called voltage divider circuit uses this phenomenon to create an output voltage of our choosing. See Figure 0.8 for an example of a generic voltage divider circuit.
+An important consequence of the voltage drop is that it can be used to control a circuit precisely. The so-called voltage divider circuit uses this phenomenon to create an output voltage of our choosing. See Figure 0.8 for an example of a generic voltage divider circuit.
 
 ![A standard voltage divider](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.8.jpg)  
 Figure 0.8: A standard voltage divider
 
 ### A Briefer Introduction to Servo Motors
-
-### Your Circuit Doesn't Work! A Quick Note on Debugging.
 
 ### Working with the Arduino Microcontroller
 
@@ -107,8 +105,45 @@ For coding projects in any language, but Arduino specifically you have to be abl
 
 This is a lot to go through right now. If you have any prior experience with coding, then most of this should simply be looking up the new syntax. If you aren't familiar with these concepts, then don't try to go through all of the reference right now. Instead focus on the aspects that you think will help you solve a particular exercise as you go through this workshop.
 
+#### The Arduino sketch
+
+Every Arduino sketch has two main components, a setup and a loop function, as seen below:
+
+The setup function runs once when you press reset or power the board:
+```ino
+void setup () {
+  // code here
+}
+```
+The loop function runs over and over again indefinitely:
+```ino
+void loop () {
+  //code here
+}
+```
+
+As seen in the comments, the setup function of the Arduino function only runs once, and before any other code is run. The main purpose of this section is to initialize any global variables that might be used later, set up board pins for use (which board pin controls what), etc. The loop function is the main logic function of the Arduino sketch. It does exactly what you would expect it to - it loops! Generally, all the logic of the Arduino sketch is contained in this function.
+
+#### Blink
+
+Let’s quickly examine pins and writes in action. Head [here](http://www.arduino.cc/en/Tutorial/Blink) and follow the tutorial there. You can find the code already written in your Arduino IDE by going to File>Examples>01.Basics>blink. The next segment will teach you how to load the sketch onto the Arduino board.
+
+#### Uploading code
+
+To upload a Arduino sketch from the IDE to the board, simply follow these steps once you have an arduino sketch open:
+
+1. Compile your Arduino sketch using the check mark button in the top toolbar. This will build your sketch code, and check if there are any syntactical issues. If there are, you should fix them now.
+
+2. Connect the USB Type-B end of the USB wire into the board, and the USB Type-A end into your computer. If you completed the driver steps, your board should be recognized with no issues.
+
+3. Go to Tools>Board and make sure you have the correct board specified. For this tutorial we are using the Arduino Uno.
+
+4. Go to Tools>Serial Port, and make sure you have the correct board for your board selected. There generally is only one port, but if there are more, trial and error usually works.
+
+5. Click on the Right Arrow button in the toolbar to verify and upload your code.
+
 ##### Exercise 1.1 (Serial Print, strings)
-Write an Arduino sketch to print "Hello World!". Make sure to use correct Arduino sketch layout.
+Write an Arduino sketch to print "Hello World!". Make sure to use correct Arduino sketch layout. **This will be useful for debugging, as you can insert print statements in your code to check execution.**
 
 ##### Exercise 1.2 (for loops, variables)
 Build on the following Arduino sketch so that it prints a 10-level left-aligned pyramid of asterisks. Make sure you use the variable levels in your loop function.
@@ -116,6 +151,7 @@ Build on the following Arduino sketch so that it prints a 10-level left-aligned 
 ```ino
 void setup () {
   int levels = 10;
+  Serial.begin(9600);
 }
 
 void loop () {
@@ -136,10 +172,21 @@ Expected output:
 \#\#\#\#\#\#\#\#\#  
 \#\#\#\#\#\#\#\#\#\#  
 
+As a final note, here are some links to documentation you may find helpful for configuring and using the pins of the Arduino:
+
+1. [PinMode](https://www.arduino.cc/en/Reference/PinMode)
+
+2. [DigitalRead](https://www.arduino.cc/en/Reference/DigitalRead)
+
+3. [DigitalWrite](https://www.arduino.cc/en/Reference/DigitalWrite)
+
+4. [AnalogRead](https://www.arduino.cc/en/Reference/AnalogRead)
+
+### Your Circuit Doesn't Work! A Quick Note on Debugging.
 
 ### Connecting Everything Together
 
-### Battery Power
+#### Battery Power
 
 ### Bonus!
 Having a robot rover that moves around according to your commands is pretty cool, but it would be way better if it could respond to its environment. If you have extra time, add a sensor to your robot! We will supply an assortment of sensors which you can attach to your robot to gain feedback from the environment. All of these can be connected to the Arduino for both power and communications.
