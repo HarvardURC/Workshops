@@ -5,13 +5,64 @@ Welcome to the Harvard Undergraduate Robotics Club's Wintersession workshops! Ov
 ## Part One: Mechanical Design
 ### Getting Started
 
-### How do I use Solidworks?
+### What if I'm a Solidworks Noob?
+That's fine! If you haven't used SolidWorks before, follow the steps below to complete an example project to gain some familiarity. If you are comfortable with Solidworks, skip to the next section.
+
+1. Open SolidWorks by clicking on the appropriate icon on the desktop.
+
+2. In the top left corner, start a new part by clicking "File -> New" or by clicking the white page icon in the top toolbar.
+
+3. When prompted, select "New Part."
+
+4. In the bottom right corner of the window, there should be a bar that says either "IPS" (Inch/Pound/Second) or "MMGS" (Millimeter/Gram/Second). Click on this bar and select "IPS". HURC will work almost exclusively in inches.
+
+5. Now you are ready to begin constructing your part. In the top right corner, underneath the top toolbar, click "Extruded Boss/Base." The symbol for this is a yellow square with a smaller green square overlaid.
+
+6. The window will prompt you to choose one of three planes to construct your part in: Top, Front, or Right. Select the "Front" plane.
+
+7. We will be designing a door-stop that consists of two parts. This might seem to be a device that should just be one part. That's because it is, but this is a tutorial so just humor us.
+
+8. You should now be in the "Edit Sketch" mode. Begin by drawing a line (select the "Line" tool from the toolbar on the top of the page) from the origin horizontally to the right. Do not worry about the length of this line at the moment.
+
+9. Draw a second line also from the origin, extending at an arbitrary angle to the top right. Do not worry about the length of this line or the angle between the two lines.
+
+10. Draw a third line connecting the two lines you have drawn previously. You should now have a triangle with one horizontal side pictured on your screen.
+
+11. Deselect the "Line" tool. Do NOT click "Exit Sketch"
+
+12. Click on the third line that you drew. On the left side of the screen, there should be the option to "Add Relation". Click on "vertical." You should now have a right triangle on your screen.
+
+13. Hold down the right-click button on your mouse, move your mouse upward, then release the right-click button. You should now be in the "Smart Dimension" mode.
+
+14. Click on the horizontal line. It will prompt you to input the desired length - input "2 in" or simply "2". Hit enter.
+
+15. Click on the angled line. It will prompt you to input the desired length. Do NOT input a length; instead, click again on the horizontal line. This will allow you to define the angle between the lines. Set the angle to 20 degrees.
+
+16. Click on "Exit Sketch" at the top left. You will be prompted to define the extrusion measurement (the depth of the 3D part). Set it to be "3/4 in" or simply "3/4". Or if it floats your boat "0.75". Hit enter.
+
+17. You should now see a 3D wedge on your screen. You can manipulate your view of the wedge by pushing the mouse's scroll wheel in and moving the mouse or by hitting Ctrl + n, where n is any number between 1 and 8.
+
+18. We are almost done with this part. Hit Ctrl + 4 or otherwise navigate to view the vertical end of the part.
+
+19. On the top toolbar, click on "Hole Wizard." It will prompt you to choose a face on which to construct the hole. Select the vertical end currently in your view.
+
+20. On the left-hand side, select "Straight tap" and set the thread sizes to be ANSI-inch. Then, select the option of "10-32".
+
+21. Set the depth of the hole to be 0.5"
+
+22. Click on the "Positions" tab. Click once anywhere on the selected face.
+
+23. Use "Smart Dimension" (recall from earlier) to set the point to be 0.25" from the bottom of the stop, and 0.5" from the right.
+
+24. You are done with this part! Create a new folder called "HURC tutorial_YOUR NAME" on the Desktop and save the part in that folder with the file name of "Door stop 1"
 
 ### Building your Robot Chassis
 
 ## Part Two: Circuits and Coding
 ### Getting Started
-Once we have assembled the components of the robot, we need to connect them in a circuit that is controlled by a microcontroller, which is basically a computer without the operating system. For this project, you will be using an Arduino Uno programmed in the Arduino Programming Language (documentation [here](https://www.arduino.cc/en/Reference/HomePage)), which is essentially C/C++, but with some minor variations to tailor it for microcontrollers. In order to upload programs to the microcontroller, you need to install the Arduino IDE. IDE is short for Integrated Development Environment, which contains not only the text editor we need to write our code in, but also a compiler to build our code, and communication protocols with the chip that we are programming. Arduino boards are small boards that contain a microcontroller and easy to use interfaces for programming the processor and using it to control electronics. Follow the steps below to get the Arduino IDE installed:
+Once we have assembled the components of the robot, we need to connect them in a circuit that is controlled by a microcontroller, which is basically a computer without the operating system. For this project, you will be using an Arduino Uno programmed in the Arduino Programming Language (documentation [here](https://www.arduino.cc/en/Reference/HomePage)), which is essentially C/C++, but with some minor variations to tailor it for microcontrollers. 
+
+In order to upload programs to the microcontroller, you need to install the Arduino IDE. IDE is short for Integrated Development Environment, which contains not only the text editor we need to write our code in, but also a compiler to build our code, and communication protocols with the chip that we are programming. Arduino boards are small boards that contain a microcontroller and easy to use interfaces for programming the processor and using it to control electronics. Follow the steps below to get the Arduino IDE installed:
 
 1. Click [here](http://arduino.cc/en/Main/Software) to access the download page.
 
@@ -29,11 +80,11 @@ Before you begin messing about with the Arduino, it is good to have an understan
 
 The first thing you need to know before getting started are the components most used in electronic circuits, and how they work (at a very high level). The following are the components that you will need to know in order to begin building simple circuits (and, subsequently, simple robots). Figure 0.1 shows how a component is represented in a circuit schematic, and directly below are pictorial representations.
 
-1. Power sources - A power source provides the voltage ( Volts) and current (Amperes) necessary to drive a circuit. At its core, it is a source of electric potential, and without it a circuit would be useless. Power sources can take the form of batteries, power supplies, or microcontrollers (an Arduino has a max pin output of 5V ). For simplicity, we will be using a DC power source.
+1. Power sources - A power source provides the voltage (Volts) and current (Amperes) necessary to drive a circuit. At its core, it is a source of electric potential, and without it a circuit would be useless. Power sources can take the form of batteries, power supplies, or microcontrollers (an Arduino has pins for 3.3V and 5V out). 
 2. Resistors - Resistors (Ohms), to put it simply, resist. They impede the flow of electrons through a circuit, and subsequently results in a voltage drop. A voltage drop is a change in the amount of voltage in the circuit, and through it one is able to control how a circuit behaves fairly accurately. One thing to know is that current always follows through the path of least resistance, thus if a current has a choice between a 500 Ohm resistor and a 10000 ohm resistor, it will flow through the 500 ohm resistor.
-3. Potentiometers (aka pots) - Potentiometers are essential variable resistors. While a resistor can only have a fixed resistance, potentiometers can be tuned to any resistance within its range (we will be using 10 kOhm pots, meaning they can take a value between 0 Ohms and 10000 Ohms).
-4. LEDs - LED stands for Light Emitting Diode. In its simplest form, it turns current into light and heat, while at the same time acting like a resistor and producing a voltage drop. Because LEDs are diodes, it is important to know that they only work if connected in the proper direction (the longer leg is the positive end, the shorter leg is the negative end).
-5. Capacitors - Capacitors act like buckets for electricity; they store charge and can thus be used as temporary and small batteries (as well as producing some other useful phenomenon). Capacitors, like LEDs, are polarized and will only work if placed in circuit in the correct orientation.
+3. Potentiometers (aka pots) - Potentiometers are essentially variable resistors. While a resistor can only have a fixed resistance, potentiometers can be tuned to any resistance within its range.
+4. LEDs - LED stands for Light Emitting Diode. In its ideal form, it turns current into light, while at the same time producing a voltage drop. Because LEDs are diodes, it is important to know that they only work if connected in the proper direction (the longer leg is the positive end, the shorter leg is the negative end).
+5. Capacitors - Capacitors act like buckets for electricity; they store charge and can thus be used as temporary and small batteries (as well as producing some other useful phenomenon). Some capacitors, like LEDs, are polarized and will only work if placed in circuit in the correct orientation (these will be clearly marked). **Please make sure a polarized capacitor is plugged in correctly. They will explode if the polarization is reversed!**
 
 ![Components](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.1.jpg)  
 Figure 0.1: The components we’ll be working with
