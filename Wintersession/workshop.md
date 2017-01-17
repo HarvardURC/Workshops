@@ -182,6 +182,9 @@ As a final note, here are some links to documentation you may find helpful for c
 
 4. [AnalogRead](https://www.arduino.cc/en/Reference/AnalogRead)
 
+For your reference, we have included a pinout diagram for the Arduino Uno.
+![Pinout Diagram for the Arduino Uno R3](https://raw.githubusercontent.com/HarvardURC/Workshops/master/Wintersession/assets/uno_pinout.jpg)
+
 ### Your Circuit Doesn't Work! A Quick Note on Debugging.
 
 ### Connecting Everything Together
