@@ -12,51 +12,27 @@ That's fine! If you haven't used SolidWorks before, follow the steps below to co
 
 2. In the top left corner, start a new part by clicking "File -> New" or by clicking the white page icon in the top toolbar.
 
-3. When prompted, select "New Part."
+3. When prompted, select "Tutorials"
 
-4. In the bottom right corner of the window, there should be a bar that says either "IPS" (Inch/Pound/Second) or "MMGS" (Millimeter/Gram/Second). Click on this bar and select "IPS". HURC will work almost exclusively in inches.
+4. From the right hand bar that opened up, choose "Tutorials" from the "SOLIDWORKS Curriculum" section.
 
-5. Now you are ready to begin constructing your part. In the top right corner, underneath the top toolbar, click "Extruded Boss/Base." The symbol for this is a yellow square with a smaller green square overlaid.
+5. Choose "Lesson 1: Parts" and complete the tutorial.
 
-6. The window will prompt you to choose one of three planes to construct your part in: Top, Front, or Right. Select the "Front" plane.
-
-7. We will be designing a door-stop that consists of two parts. This might seem to be a device that should just be one part. That's because it is, but this is a tutorial so just humor us.
-
-8. You should now be in the "Edit Sketch" mode. Begin by drawing a line (select the "Line" tool from the toolbar on the top of the page) from the origin horizontally to the right. Do not worry about the length of this line at the moment.
-
-9. Draw a second line also from the origin, extending at an arbitrary angle to the top right. Do not worry about the length of this line or the angle between the two lines.
-
-10. Draw a third line connecting the two lines you have drawn previously. You should now have a triangle with one horizontal side pictured on your screen.
-
-11. Deselect the "Line" tool. Do NOT click "Exit Sketch"
-
-12. Click on the third line that you drew. On the left side of the screen, there should be the option to "Add Relation". Click on "vertical." You should now have a right triangle on your screen.
-
-13. Hold down the right-click button on your mouse, move your mouse upward, then release the right-click button. You should now be in the "Smart Dimension" mode.
-
-14. Click on the horizontal line. It will prompt you to input the desired length - input "2 in" or simply "2". Hit enter.
-
-15. Click on the angled line. It will prompt you to input the desired length. Do NOT input a length; instead, click again on the horizontal line. This will allow you to define the angle between the lines. Set the angle to 20 degrees.
-
-16. Click on "Exit Sketch" at the top left. You will be prompted to define the extrusion measurement (the depth of the 3D part). Set it to be "3/4 in" or simply "3/4". Or if it floats your boat "0.75". Hit enter.
-
-17. You should now see a 3D wedge on your screen. You can manipulate your view of the wedge by pushing the mouse's scroll wheel in and moving the mouse or by hitting Ctrl + n, where n is any number between 1 and 8.
-
-18. We are almost done with this part. Hit Ctrl + 4 or otherwise navigate to view the vertical end of the part.
-
-19. On the top toolbar, click on "Hole Wizard." It will prompt you to choose a face on which to construct the hole. Select the vertical end currently in your view.
-
-20. On the left-hand side, select "Straight tap" and set the thread sizes to be ANSI-inch. Then, select the option of "10-32".
-
-21. Set the depth of the hole to be 0.5"
-
-22. Click on the "Positions" tab. Click once anywhere on the selected face.
-
-23. Use "Smart Dimension" (recall from earlier) to set the point to be 0.25" from the bottom of the stop, and 0.5" from the right.
-
-24. You are done with this part! Create a new folder called "HURC tutorial_YOUR NAME" on the Desktop and save the part in that folder with the file name of "Door stop 1"
+6. Choose "Lesson 2: Assemblies" and complete the tutorial.
 
 ### Building Your Robot Chassis
+Now that you know how to work with Solidworks, it's time to design your robot's chassis! The design of the chassis is up to you, but there are a few things that you should keep in mind:
+
+1. The servo motors we have aren't too strong, so you shouldn't make the chassis too big. We reccomend making the chassis about as big as the HURC micromouse robot (ask one of the HURC members to show you the bot, if you don't know how big it is).
+
+2. Your chassis should hold 2 servo motors, 1 caster wheel, an arduino UNO, a breadboard, a 9V battery and any sensors and other components you decide to use. Design a mounting solution for all parts!
+
+3. The majority of the chassis should be built out of laser-cut acrylic. As such, your chassis should be buildable from 1 or multiple 1/4 inch flat acrylic pieces. We can also 3D print smaller non-flat parts for mounts. Ask the HURC members how to attach acrylic pieces to each other if you don't know how.
+
+4. We reccomend using 4-40 screws whenever possible. Ask the HURC members how big screw holes need to be for 4-40s.
+
+5. Feel free to incorporate cool rastererd designs into your chassis.
+
 
 ## Part Two: Circuits and Coding
 ### Getting Started
@@ -127,8 +103,6 @@ An important consequence of the voltage drop is that it can be used to control a
 
 ![A standard voltage divider](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.8.jpg)  
 Figure 1.6: A standard voltage divider
-
-### A Briefer Introduction to Servo Motors
 
 ### Working with the Arduino Microcontroller
 
@@ -237,11 +211,21 @@ For your reference, we have included a pinout diagram for the Arduino Uno.
 ![pinout uno](https://raw.githubusercontent.com/HarvardURC/Workshops/master/Wintersession/assets/uno_pinout.jpg)
 Figure(): Pinout Diagram for the Arduino Uno R3
 
+### A Briefer Introduction to Servo Motors
+
+For the robot, you will be using 2 small continuos servo motors. Continuos servo motors work very similar to regular motors, but offer a little bit more control.
+
+Read [this manual page](https://www.arduino.cc/en/Reference/ServoWrite) to learn how to control the servo motor with an arduino.
+
+The servos have 3 pins: Power, Ground and Control. Connect power (red) and ground (black) to the the 5V voltage regulator, which should be hooked up to the 9V battery. Connect control to an arduino output pin.
+
 ### Your Circuit Doesn't Work! A Quick Note on Debugging.
+
+If your code or circuit doesn't work, then the first thing to do is to find out what is breaking. Try commenting out code or looking at parts of your circuit separately and testing if the individual components perform as expected. At first try splitting your code or circuit to 2-3 parts. Once you've detected the faulty piece, try recursively splitting into smaller pieces until you can pinpoint the faulty part.
 
 ### Connecting Everything Together
 
-#### Battery Power
+Now that you have you have a chassis and know how to program an Arduino, assemble the chassis and start writing arduino code that will help you control the robot. At first try to make it move forward. Once you've managed that, try getting it to turn.
 
 ### Bonus!
 Having a robot rover that moves around according to your commands is pretty cool, but it would be way better if it could respond to its environment. If you have extra time, add a sensor to your robot! We will supply an assortment of sensors which you can attach to your robot to gain feedback from the environment. All of these can be connected to the Arduino for both power and communications.
