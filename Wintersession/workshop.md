@@ -29,9 +29,9 @@ Now that you know how to work with Solidworks, it's time to design your robot's 
 
 3. The majority of the chassis should be built out of laser-cut acrylic. As such, your chassis should be buildable from 1 or multiple 1/4 inch flat acrylic pieces. We can also 3D print smaller non-flat parts for mounts. Ask the HURC members how to attach acrylic pieces to each other if you don't know how.
 
-4. We reccomend using 4-40 screws whenever possible. Ask the HURC members how big screw holes need to be for 4-40s.
+4. We recommend using 4-40 screws whenever possible. Ask the HURC members how big screw holes need to be for 4-40s.
 
-5. Feel free to incorporate cool rastererd designs into your chassis.
+5. Feel free to incorporate cool rastered designs into your chassis.
 
 
 ## Part Two: Circuits and Coding
