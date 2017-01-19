@@ -1,6 +1,6 @@
 # HURC Wintersession Workshop: Robot Rover
 
-Welcome to the Harvard Undergraduate Robotics Club's Wintersession workshops! Over the course of these workshops, you will be constructing a miniature robot rover from the ground up. [ADD SOME STUFF HERE!!!]. If at any point you have a question, don't hesitate to ask one of the HURC members for guidance.
+Welcome to the Harvard Undergraduate Robotics Club's Wintersession workshops! Over the course of these workshops, you will be constructing a miniature robot rover from the ground up. If at any point you have a question, don't hesitate to ask one of the HURC members for guidance.
 
 ## Part One: Mechanical Design
 ### Getting Started
