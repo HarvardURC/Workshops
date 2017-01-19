@@ -23,9 +23,9 @@ That's fine! If you haven't used SolidWorks before, follow the steps below to co
 ### Building Your Robot Chassis
 Now that you know how to work with Solidworks, it's time to design your robot's chassis! The design of the chassis is up to you, but there are a few things that you should keep in mind:
 
-1. The servo motors we have aren't too strong, so you shouldn't make the chassis too big. We reccomend making the chassis about as big as the HURC micromouse robot (ask one of the HURC members to show you the bot, if you don't know how big it is).
+1. The servo motors we have aren't too strong, so you shouldn't make the chassis too big. We recommend making the chassis about as big as the HURC micromouse robot (ask one of the HURC members to show you the bot if you don't know how big it is).
 
-2. Your chassis should hold 2 servo motors, 1 caster wheel, an arduino UNO, a breadboard, a 9V battery and any sensors and other components you decide to use. Design a mounting solution for all parts!
+2. Your chassis should hold 2 servo motors, 1 caster wheel, an Arduino UNO, a breadboard, a 9V battery and any sensors and other components you decide to use. Design a mounting solution for all parts!
 
 3. The majority of the chassis should be built out of laser-cut acrylic. As such, your chassis should be buildable from 1 or multiple 1/4 inch flat acrylic pieces. We can also 3D print smaller non-flat parts for mounts. Ask the HURC members how to attach acrylic pieces to each other if you don't know how.
 
