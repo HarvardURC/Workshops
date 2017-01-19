@@ -34,12 +34,17 @@ Now that you know how to work with Solidworks, it's time to design your robot's 
 5. Feel free to incorporate cool rastered designs into your chassis.
 
 ### Part Specifications
-Please visit theses URL's if you need datasheets on the components you will be working with:
+Please visit these URL's if you need datasheets on the components you will be working with:
 https://www.adafruit.com/product/64
+
 https://www.adafruit.com/product/2442
+
 https://www.adafruit.com/product/1200
+
 https://www.adafruit.com/product/2744
+
 https://www.arduino.cc/en/Main/ArduinoBoardUno
+
 https://www.pololu.com/product/136
 
 ## Part Two: Circuits and Coding
