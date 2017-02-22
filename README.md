@@ -6,4 +6,4 @@ Here you will find the HURC recruitment workshops!
 
 [Computer Aided Design](cad.md)
 
-[Wintersession](Wintersession/workshop.md)
+[Wintersession](wintersession.md)

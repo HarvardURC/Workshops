@@ -221,7 +221,7 @@ As a final note, here are some links to documentation you may find helpful for c
 4. [AnalogRead](https://www.arduino.cc/en/Reference/AnalogRead)
 
 For your reference, we have included a pinout diagram for the Arduino Uno.
-![pinout uno](https://raw.githubusercontent.com/HarvardURC/Workshops/master/Wintersession/assets/uno_pinout.jpg)
+![pinout uno](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/uno_pinout.jpg)
 Figure(): Pinout Diagram for the Arduino Uno R3
 
 ### A Briefer Introduction to Servo Motors

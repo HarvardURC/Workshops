@@ -282,6 +282,20 @@ Write a function that takes a list of strings an prints them, one per line, in a
 NOTE: Underscores represent spaces.
 Use a separate function for determining the frame width that takes in the list of words as an input and a separate function for printing a line of the frame, that takes in a word and the frame width.
 
+As a final note, here are some links to documentation you may find helpful for configuring and using the pins of the Arduino:
+
+1. [PinMode](https://www.arduino.cc/en/Reference/PinMode)
+
+2. [DigitalRead](https://www.arduino.cc/en/Reference/DigitalRead)
+
+3. [DigitalWrite](https://www.arduino.cc/en/Reference/DigitalWrite)
+
+4. [AnalogRead](https://www.arduino.cc/en/Reference/AnalogRead)
+
+For your reference, we have included a pinout diagram for the Arduino Uno.
+![pinout uno](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/uno_pinout.jpg)
+Figure(): Pinout Diagram for the Arduino Uno R3
+
 ## Final Challenge
 
 For this final challenge you will merge the skills you've just learnt. But first you have to learn how to interface with the Arduino microcontroller. A Microcontroller both accepts and outputs current. There are designated pins in the Arduino which accept analog inputs or digital inputs (we will not delve into the details behind the differences). These inputs can then, with a little code, be used to control the output of the Arduino in such a way that we can output the right out amount of voltage to a target location (via a specific output pin). In this next exercise you will explore the magic of analog-digital interfacing. Such interfacing is essential in robotics, because most times robots need to be autonomous or controlled remotely, and a microcontroller like an Arduino can be programmed to control the circuitry in the way that we want it.
