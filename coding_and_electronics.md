@@ -87,7 +87,7 @@ Figure 0.3: An LED and resistor in series
 Looking at the schematic in Figure 0.4 you can see that the resistor and capacitor are in parallel in the circuit diagram. On a breadboard components in parallel need to share both rows as points of contact. When components share rows in this way, current must flow into both of them at the same time, this making the connection a parallel one.
 
 ![A circuit in parallel](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.4.png)  
-Figure 0.4: A capacitor and resistor in parallel
+Figure 0.4: 2 resistors in parallel
 
 ##### Exercises
 
