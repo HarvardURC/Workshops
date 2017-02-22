@@ -215,8 +215,10 @@ Write an Arduino sketch to print "Hello World!". Make sure to use correct Arduin
 Build on the following Arduino sketch so that it prints a 10-level left-aligned pyramid of asterisks. Make sure you use the variable levels in your loop function.
 
 ```ino
+int levels;
+
 void setup () {
-  int levels = 10;
+  levels = 10;
 }
 
 void loop () {
