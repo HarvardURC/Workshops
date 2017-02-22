@@ -1,8 +1,36 @@
+# Notes for AM141r
+
+Go through the workshop skipping the "Measuring resistance, voltage and current" part.
+
+Only do the following exercises:
+
+- 1.1 - 1.3
+- 3.1 - 3.2
+- 4.1 - 4.2
+- 5.1
+
+Once you've finished these, feel free to attempt the Coding Challenge or the Final Challenge.
+
+If you're interested in what The Harvard Undergraduate Robotics Club (HURC) does, please check out our [website](http://harvardrobotics.com).
+
 # Coding and Electronics workshop
 
 This workshop is intended to guide you through some basic coding techniques, teach you the basics of designing electric circuits as well as give you an introduction to programming an arduino board. If at any point you have a question, don't hesitate to ask one of the HURC members for guidance.
 
-## Getting started:
+## Parts
+
+Before starting this workshop, you should have the following parts:
+
+- An arduino (Micro or Uno)
+- An USB cable for connecting the Arduino
+- A breadboard
+- Jumper cables
+- 3 LEDs
+- 2 pushbuttons
+- Some resistors
+- A Multimeter
+
+## Getting started
 
 Installing the Arduino IDE
 The first step that needs to be completed before any coding can be done is to set up the correct environment. Since we will primarily be using Arduino boards to program our robots, it is ideal for us to develop in the Arduino IDE. IDE is short for Integrated Development Environment, which contains not only the text editor we need to write our code in, but also a compiler to build our code, and communication protocols with the chip that we are programming. Arduino boards are small boards that contain a microcontroller and easy to use interfaces for programming the processor and using it to control electronics. Follow the steps below to get the Arduino IDE installed:
@@ -43,34 +71,32 @@ The next important step is learning the layout of the breadboard. A breadboard i
 ![A breadboard](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.2.jpg)  
 Figure 0.2: A standard breadboard
 
-In this section, we will review the basic building blocks of an Arduino sketch (the common name of an Arduino program), and work through several examples that will highlight these ideas. Our main reference for this section will be the official Arduino reference, which can be found [here](http://arduino.cc/en/Reference/HomePage). It is probably a lot to take in at once, but this page will probably answer any questions you might have about the syntax of the arduino language.
-
 #### Ohm's Law
 
 Ohm's Law is as follows: V = I * R, where V is voltage, I is current and R is resistance. In other words, The voltage drop across 2 points is proportional to the current flowing between those points and the resistance between the points. This formula (perhaps the most important in all of electronics) is extremely useful for most simple circuits, and for all the circuits being built today. The linear relation between V and I or V and R means that if we know any of the two values of a circuit, we can calculate all parameters that define how it works. We also have the power equation: P = V * I = I^2*R = V^2 / R, where P is power. The power value in an LED will determine how bright it shines and in a resistor, how much heat it will dissipate.
 
 #### Circuits in Series and Parallel
 
-Looking at the schematic in Figure 0.3 you can see that the LED and resistor are in series in the circuit diagram. As you can see on the breadboard to the right, components in series need to share at least one row. The row allows for one component to conduct to another.
+Looking at the schematic in Figure 0.3 you can see that the LED and resistor are in series in the circuit diagram. On a breadboard components in series need to share at least one row, as it allows for one component to conduct to another.
 
 ![A circuit in series](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.3.png)  
 Figure 0.3: An LED and resistor in series
 
-Looking at the schematic in Figure 0.4 you can see that the resistor and capacitor are in parallel in the circuit diagram. As you can see on the breadboard on the right, components in parallel need to share both rows as points of contact. When components share rows in this way, current must flow into both of them at the same time, this making the connection a parallel one.
+Looking at the schematic in Figure 0.4 you can see that the resistor and capacitor are in parallel in the circuit diagram. On a breadboard components in parallel need to share both rows as points of contact. When components share rows in this way, current must flow into both of them at the same time, this making the connection a parallel one.
 
 ![A circuit in parallel](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.4.png)  
 Figure 0.4: A capacitor and resistor in parallel
 
 ##### Exercises
 
-1. Build the circuit in Figure 0.3 and watch the LED come to life. Break the circuit and add another resistor in series (you should now have an LED in series with a resistor in series with another resistor). What happened to the brightness of the LED?
+1.1. Build the circuit in Figure 0.3 and watch the LED come to life. Break the circuit and add another resistor in series (you should now have an LED in series with a resistor in series with another resistor). What happened to the brightness of the LED?
 
-2. Kirchhoff's current law may be just as important as Ohms law in circuit analysis. It basically means that the amount of current entering a junction is equal to the current exiting the junction. That is Σ I = 0. In simpler terms, this law says that the amount of current entering a set of parallel components does not have to be equal; current splits. Voltage on the other hand is the same. Thus, the power that a certain component gets is affected by whether or not it is in series with something else. Build the circuit in Figure 0.5. Now what happened to the brightness of the LED?
+1.2. Kirchhoff's current law may be just as important as Ohms law in circuit analysis. It basically means that the amount of current entering a junction is equal to the current exiting the junction. That is Σ I = 0. In simpler terms, this law says that the amount of current entering a set of parallel components does not have to be equal; current splits. Voltage on the other hand is the same. Thus, the power that a certain component gets is affected by whether or not it is in series with something else. Build the circuit in Figure 0.5. Now what happened to the brightness of the LED?
 
 ![An LED in parallel with 2 resistors in series](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.5.png)  
 Figure 0.5: An LED in parallel with 2 resistors in series
 
-3. Now rebuild your circuit, so that it looks like the one in figure 0.6. What happened to the brightness of the LED? Why?
+1.3. Now rebuild your circuit, so that it looks like the one in figure 0.6. What happened to the brightness of the LED? Why?
 
 ![An LED and 2 resistors in parallel](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.6.png)  
 Figure 0.6: An LED and 2 resistors in parallel
@@ -84,11 +110,11 @@ Figure 0.7: How to properly connect a voltmeter and ammeter
 
 ##### Exercises
 
-1. Build the circuit from Figure 0.3. First measure the voltage of the power source by placing the probes in the buses of the breadboard (if the probe doesn't fit in to the holes, use a piece of wire to make the connection). Next, measure the voltage across the LED by placing the voltmeter in parallel with it. Next measure the voltage across the resistor. What do you notice about the voltage drops?
+2.1. Build the circuit from Figure 0.3. First measure the voltage of the power source by placing the probes in the buses of the breadboard (if the probe doesn't fit in to the holes, use a piece of wire to make the connection). Next, measure the voltage across the LED by placing the voltmeter in parallel with it. Next measure the voltage across the resistor. What do you notice about the voltage drops?
 
-2. Now measure the current in the circuit at various places (before the LED, between the LED and the resistor, and after the resistor). What do you notice about the current?
+2.2. Now measure the current in the circuit at various places (before the LED, between the LED and the resistor, and after the resistor). What do you notice about the current?
 
-3. Now rebuild the circuit from Figure 0.6 and make similar measurements. What do you notice? Can you explain what you see?
+2.3. Now rebuild the circuit from Figure 0.6 and make similar measurements. What do you notice? Can you explain what you see?
 
 Hopefully by now you have realized the difference between components in parallel and components in series. When in series, V will change at every interval, but current will stay the same. When in parallel, V will stay constant throughout, but current will change depending on what branch of the parallel tree you are measuring.
 
@@ -101,17 +127,19 @@ Figure 0.8: A standard voltage divider
 
 ##### Exercises
 
-1. First, build the voltage divider circuit, where R1 = R2. Measure the voltage drop across resistor AB. What is the relation between this drop and the output voltage of our power source? Place an LED in parallel with R2.
+3.1. First, build the voltage divider circuit, where R1 = R2. Measure the voltage drop across resistor AB. What is the relation between this drop and the output voltage of our power source? Place an LED in parallel with R2.
 
-2. Now replace R1 with a resistor at least 10 times the value of R2. What is the voltage drop across AB now? What happens to the LED?
+3.2. Now replace R1 with a resistor at least 10 times the value of R2. What is the voltage drop across AB now? What happens to the LED?
 
-3. Now return R1 to its original value and replace R2 with a value 100 times bigger than R1. What is the voltage drop across AB?
+3.3. Now return R1 to its original value and replace R2 with a value 100 times bigger than R1. What is the voltage drop across AB?
 
 As you have probably guessed by now, there is a linear relationship between the input voltage and output voltage, where the resistance are the slope. From our observations of the output voltage and the LED, we can see that when R2 » R1, the output voltage is highest, and when R1 » R2 the output voltage is lowest. The formula for a voltage divider circuit is the following: Vout = Vin * R2/(R1+R2).
 
 ### Coding
 
 Now that you know the basics of designing an electric circuit, it's time to learn basic arduino coding. Once again, if you already feel comfortable with any of the material covered, feel free to skip it.
+
+In this section, we will review the basic building blocks of an Arduino sketch (the common name of an Arduino program), and work through several examples that will highlight these ideas.
 
 First thing you have to do is familiarize yourself with the arduino board. Please review [this tutorial](http://arduino.cc/en/Guide/Board?from=Tutorial) for a general overlay of the Arduino Uno board. Although we may not be using the Uno for our actual projects, understanding the Uno board is key to understanding other Arduino boards. Don't worry if you don't understand everything just yet.
 
@@ -178,10 +206,10 @@ For coding projects in any language, but Ino in specific you have to be able to 
 
 This is a lot to go through right now. If you have any prior experience with coding, then most of this should simply be looking up the new syntax. If you aren't familiar with theses concepts, then don't try to go through all of the reference right now. Instead focus on the aspects that you think will help you solve a particular exercise as you go through this workshop.
 
-##### Exercise 1.1 (Serial Print, strings)
+##### Exercise 4.1 (Serial Print, strings)
 Write an Arduino sketch to print "Hello World!". Make sure to use correct Arduino sketch layout.
 
-##### Exercise 1.2 (for loops, variables)
+##### Exercise 4.2 (for loops, variables)
 Build on the following Arduino sketch so that it prints a 10-level left-aligned pyramid of asterisks. Make sure you use the variable levels in your loop function.
 
 ```ino
@@ -207,7 +235,7 @@ Expected output:
 \#\#\#\#\#\#\#\#\#  
 \#\#\#\#\#\#\#\#\#\#  
 
-##### Exercise 1.3 (arrays)
+##### Exercise 4.3 (arrays)
 
 Write an Arduino sketch that creates the following array {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} using a while loop.
 
@@ -225,15 +253,15 @@ int functionName  (int input1, char input2) {
 
 In the snippet above, we have a function called functionName with output type integer, and two inputs: an integer input1, and a char input2. As an aside, if you are familiar with C systems programming, you are probably used to dynamic memory allocation using the malloc() and free() commands, and returning allocated addresses. Arduino boards don’t have a heap, so you won’t be able to take advantage of that here. All logic should be done at the stack and global level.
 
-##### Exercise 2.1
+##### Exercise 5.1
 
 Write a function that takes in two integers as input, and returns the integer sum of them.
 
-##### Exercise 2.2
+##### Exercise 5.2
 
 Write a function that, when given a integer n, produces an array of with the first n Fibonacci numbers in it.
 
-##### Exercise 2.3 (Optional)
+##### Exercise 5.3 (Optional)
 
 Call the first function in the second function so that after the Fibonacci array is created, the sum off all elements in the array is computed.
 
