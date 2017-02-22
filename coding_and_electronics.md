@@ -294,7 +294,7 @@ As a final note, here are some links to documentation you may find helpful for c
 
 For your reference, we have included a pinout diagram for the Arduino Uno.
 ![pinout uno](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/uno_pinout.jpg)
-Figure(): Pinout Diagram for the Arduino Uno R3
+Figure 0.9: Pinout Diagram for the Arduino Uno R3
 
 ## Final Challenge
 
