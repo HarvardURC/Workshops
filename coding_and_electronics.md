@@ -11,6 +11,8 @@ Only do the following exercises:
 
 Once you've finished these, feel free to attempt the Coding Challenge or the Final Challenge.
 
+For the shortened version of this workshop you won't need a multimeter or the pushbuttons and you will only need one LED.
+
 If you're interested in what The Harvard Undergraduate Robotics Club (HURC) does, please check out our [website](http://harvardrobotics.com).
 
 # Coding and Electronics workshop
