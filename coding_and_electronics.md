@@ -95,7 +95,7 @@ Figure 0.4: 2 resistors in parallel
 1.2. Kirchhoff's current law may be just as important as Ohms law in circuit analysis. It basically means that the amount of current entering a junction is equal to the current exiting the junction. That is Σ I = 0. In simpler terms, this law says that the amount of current entering a set of parallel components does not have to be equal; current splits. Voltage on the other hand is the same. Thus, the power that a certain component gets is affected by whether or not it is in series with something else. Build the circuit in Figure 0.5. Now what happened to the brightness of the LED?
 
 ![An LED in parallel with 2 resistors in series](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.5.png)  
-Figure 0.5: An LED in parallel with 2 resistors in series
+Figure 0.5: An LED  with 2 resistors in series
 
 1.3. Now rebuild your circuit, so that it looks like the one in figure 0.6. What happened to the brightness of the LED? Why?
 
