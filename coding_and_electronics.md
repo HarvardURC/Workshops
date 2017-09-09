@@ -1,20 +1,3 @@
-# Notes for AM141r
-
-Go through the workshop skipping the "Measuring resistance, voltage and current" part.
-
-Only do the following exercises:
-
-- 1.1 - 1.3
-- 3.1 (But don't measure voltage)
-- 4.1 - 4.2
-- 5.1
-
-Once you've finished these, feel free to attempt the Coding Challenge or the Final Challenge.
-
-For the shortened version of this workshop you won't need a multimeter or the pushbuttons and you will only need one LED.
-
-If you're interested in what The Harvard Undergraduate Robotics Club (HURC) does, please check out our [website](http://harvardrobotics.com).
-
 # Coding and Electronics workshop
 
 This workshop is intended to guide you through some basic coding techniques, teach you the basics of designing electric circuits as well as give you an introduction to programming an arduino board. If at any point you have a question, don't hesitate to ask one of the HURC members for guidance.
