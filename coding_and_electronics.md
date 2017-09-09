@@ -49,7 +49,7 @@ The first step that needs to be completed before any coding can be done is to se
 
 Now that you have your computer ready, it's time to brush up on the basics. We will first look at electronics and then coding.
 
-### Electronics
+### Electronics
 
 First lets dive in to the world of electrical circuits. If you already feel very confident in any of the material that is covered, feel free to skim or skip it.
 
@@ -77,7 +77,7 @@ Figure 0.2: A standard breadboard
 
 Ohm's Law is as follows: V = I * R, where V is voltage, I is current and R is resistance. In other words, The voltage drop across 2 points is proportional to the current flowing between those points and the resistance between the points. This formula (perhaps the most important in all of electronics) is extremely useful for most simple circuits, and for all the circuits being built today. The linear relation between V and I or V and R means that if we know any of the two values of a circuit, we can calculate all parameters that define how it works. We also have the power equation: P = V * I = I^2*R = V^2 / R, where P is power. The power value in an LED will determine how bright it shines and in a resistor, how much heat it will dissipate.
 
-#### Circuits in Series and Parallel
+#### Circuits in Series and Parallel
 
 Looking at the schematic in Figure 0.3 you can see that the LED and resistor are in series in the circuit diagram. On a breadboard components in series need to share at least one row, as it allows for one component to conduct to another.
 
@@ -89,7 +89,7 @@ Looking at the schematic in Figure 0.4 you can see that the resistor and capacit
 ![A circuit in parallel](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.4.png)  
 Figure 0.4: 2 resistors in parallel
 
-##### Exercises
+##### Exercises
 
 1.1. Build the circuit in Figure 0.3 and watch the LED come to life. 
 1.2. Kirchhoff's current law may be just as important as Ohms law in circuit analysis. It basically means that the amount of current entering a junction is equal to the current exiting the junction. That is Σ I = 0. In simpler terms, this law says that the amount of current entering a set of parallel components does not have to be equal; current splits. Voltage on the other hand is the same. Thus, the power that a certain component gets is affected by whether or not it is in series with something else. Build the circuit in Figure 0.5. Now what happened to the brightness of the LED?
@@ -102,7 +102,7 @@ Figure 0.5: An LED  with 2 resistors in series
 ![An LED and 2 resistors in parallel](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.6.png)  
 Figure 0.6: An LED and 2 resistors in parallel
 
-#### Measuring resistance, voltage and current
+#### Measuring resistance, voltage and current
 
 A multimeter is used to measure the V, I, and R -values at certain points in a circuit. Instead of using multiple separate devices, you can simply turn the dial on a multimeter to turn it into a voltmeter, ammeter or some other measurement device. The way multimeters measure voltage, current, and resistance are fundamentally different. A voltmeter must be placed in parallel to what you want to measure in order to find the voltage. An ammeter on the other hand must be placed in series with the circuit; the best way to do so is to pretend that it is another resistor. In Figure 0.7 you can see how a voltmeter and ammeter are placed properly in order to measure voltage or current. In order to measure the resistance of an element, you have to connect the multimeter in parallel to the component, Similarly to how you would measure voltage.
 
@@ -126,7 +126,7 @@ An important consequence of the voltage drop is that it can be used to control a
 ![A standard voltage divider](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.8.jpg)  
 Figure 0.8: A standard voltage divider
 
-##### Exercises
+##### Exercises
 
 3.1. First, build the voltage divider circuit, where R1 = R2. Measure the voltage drop across resistor AB. What is the relation between this drop and the output voltage of our power source? Place an LED in parallel with R2.
 
