@@ -276,9 +276,12 @@ As a final note, here are some links to documentation you may find helpful for c
 
 4. [AnalogRead](https://www.arduino.cc/en/Reference/AnalogRead)
 
-For your reference, we have included a pinout diagram for the Arduino Uno.
+For your reference, we have included a pinout diagram for the Arduino Uno and the Arduino Micro.
 ![pinout uno](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/uno_pinout.jpg)
 Figure 0.9: Pinout Diagram for the Arduino Uno R3
+
+![pinout uno](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/micro_pinout.png)
+Figure 1.0: Pinout Diagram for the Arduino Micro
 
 ## Final Challenge
 
