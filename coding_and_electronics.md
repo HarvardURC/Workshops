@@ -1,13 +1,13 @@
 # Coding and Electronics workshop
 
-This workshop is intended to guide you through some basic coding techniques, teach you the basics of designing electric circuits as well as give you an introduction to programming an arduino board. If at any point you have a question, don't hesitate to ask one of the HURC members for guidance.
+This workshop is intended to guide you through some basic coding techniques, teach you the basics of designing electric circuits, and give you an introduction to programming an Arduino or Teensy board. If at any point you have a question, please ask one of the HURC members for guidance; we're here to help!
 
 ## Parts
 
 Before starting this workshop, you should have the following parts:
 
-- An arduino (Micro or Uno)
-- An USB cable for connecting the Arduino
+- A Teensy LC
+- A USB micro cable for connecting the Teensy
 - A breadboard
 - Jumper cables
 - 3 LEDs
@@ -15,10 +15,8 @@ Before starting this workshop, you should have the following parts:
 - Some resistors
 - A Multimeter
 
-## Getting started
 
-Installing the Arduino IDE
-The first step that needs to be completed before any coding can be done is to set up the correct environment. Since we will primarily be using Arduino boards to program our robots, it is ideal for us to develop in the Arduino IDE. IDE is short for Integrated Development Environment, which contains not only the text editor we need to write our code in, but also a compiler to build our code, and communication protocols with the chip that we are programming. Arduino boards are small boards that contain a microcontroller and easy to use interfaces for programming the processor and using it to control electronics. Follow the steps below to get the Arduino IDE installed:
+The first step that needs to be completed before any coding can be done is to set up the correct environment. Since we will primarily be using Arduino or Teensy boards to program our robots, it is ideal for us to develop in the Arduino IDE. IDE is short for Integrated Development Environment, which contains not only the text editor we need to write our code in, but also a compiler to build our code, and communication protocols with the chip that we are programming. Arduino/Teensy boards are small boards that contain a microcontroller and easy to use interfaces for programming the processor and using it to control electronics. The Arduino IDE will allow us to program *both Arduino and Teensy boards*. Follow the steps below to get the Arduino IDE installed:
 
 1. Click [here](http://arduino.cc/en/Main/Software) to access the download page.
 
@@ -28,37 +26,39 @@ The first step that needs to be completed before any coding can be done is to se
 
 5. Once the install finishes, close the installer, and you should have the Arduino IDE installed on your computer!
 
+With the Arduino IDE installed, we can install an add-on that will also allow us to program Teensy boards from the Arduino IDE! Click [here](https://www.pjrc.com/teensy/td_download.html) to access the download page for the Teensyduino add-on program. Follow the instructions on the page to get the Arduino IDE setup with the Teensyduino add-on program.
+
 ## The Basics
 
-Now that you have your computer ready, it's time to brush up on the basics. We will first look at electronics and then coding.
+Now that you have your computer ready, it's time to brush up on the basics. We will first look at electronics and then at coding.
 
 ### Electronics
 
-First lets dive in to the world of electrical circuits. If you already feel very confident in any of the material that is covered, feel free to skim or skip it.
+First lets dive in to the world of electrical circuits. If you already feel very confident in the material that is covered, feel free to skim or skip it.
 
 #### Components
 
-The first thing you need to know before getting started are the components most used in electronic circuits, and how they work (at a very high level). The following are the components that you will need to know in order to begin building simple circuits (and, subsequently, simple robots). Figure 0.1 shows how a component is represented in a circuit schematic, and directly below are pictorial representations.
+The first thing you need to know before getting started are the components most used in electronic circuits and how they work (at a very high level). The following are the components that you will need to know in order to begin building simple circuits (and, subsequently, simple robots). Figure 0.1 shows how a component is represented in a circuit schematic, and directly below are pictorial representations.
 
-1. Power sources - A power source provides the voltage ( Volts) and current (Amperes) necessary to drive a circuit. At its core, it is a source of electric potential, and without it a circuit would be useless. Power sources can take the form of batteries, power supplies, or microcontrollers (an Arduino has a max pin output of 5V ). For simplicity, we will be using a DC power source.
-2. Resistors - Resistors (Ohms), to put it simply, resist. They impede the flow of electrons through a circuit, and subsequently results in a voltage drop. A voltage drop is a change in the amount of voltage in the circuit, and through it one is able to control how a circuit behaves fairly accurately. One thing to know is that current always follows through the path of least resistance, thus if a current has a choice between a 500 Ohm resistor and a 10000 ohm resistor, it will flow through the 500 ohm resistor.
-3. Potentiometers (aka pots) - Potentiometers are essential variable resistors. While a resistor can only have a fixed resistance, potentiometers can be tuned to any resistance within its range (we will be using 10 kOhm pots, meaning they can take a value between 0 Ohms and 10000 Ohms).
+1. Power sources - A power source provides the voltage (Volts) and current (Amperes) necessary to drive a circuit. At its core, it is a source of electric potential, and without it a circuit would be useless. Power sources can take the form of batteries, power supplies, or microcontrollers (an Arduino has a max pin output of 5V, and our Teensy LC has a max pin output of 3.3V). For simplicity, we will be using a DC power source.
+2. Resistors - Resistors (Ohms), to put it simply, resist. They impede the flow of electrons through a circuit and subsequently create a voltage drop. A voltage drop is a change in the amount of voltage in the circuit, allowing one to control how a circuit behaves fairly accurately. One thing to know is that current follows the path of least resistance, thus if a current has a choice between a 500 Ohm resistor and a 10000 Ohm resistor, most of it will flow through the 500 ohm resistor.
+3. Potentiometers (aka pots) - Potentiometers are essential variable resistors. While a resistor can only have a fixed resistance, potentiometers can be tuned to any resistance within its range.
 4. LEDs - LED stands for Light Emitting Diode. In its simplest form, it turns current into light and heat, while at the same time acting like a resistor and producing a voltage drop. Because LEDs are diodes, it is important to know that they only work if connected in the proper direction (the longer leg is the positive end, the shorter leg is the negative end).
 5. Capacitors - Capacitors act like buckets for electricity; they store charge and can thus be used as temporary and small batteries (as well as producing some other useful phenomenon). Capacitors, like LEDs, are polarized and will only work if placed in circuit in the correct orientation.
 
 ![Components](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.1.jpg)  
-Figure 0.1: The components we’ll be working with
+Figure 0.1: Basic electrical components
 
 #### Breadboarding
 
-The next important step is learning the layout of the breadboard. A breadboard is a tool made for the quick prototyping of circuits. It is easy to build circuits, and fix mistakes because components and wires are stuck into the sockets of a breadboard rather than being soldered together permanently. Figure 0.2 shows the layout of an example breadboard. From the image you can see that if a breadboard is held vertically, the rows in the middle are connected together and essentially act as a single point. Similarly, the columns to the left and right of the breadboard are connected together. The rows are where you will be connecting most of your components and the columns are usually used for power and ground.
+The next important step is learning the layout of the breadboard. A breadboard is a tool made for the quick prototyping of circuits. It is easy to build circuits and fix mistakes on a breadboard because components and wires are stuck into the sockets of a breadboard rather than being soldered together permanently. Figure 0.2 shows the layout of an example breadboard. From the image you can see that if a breadboard is held vertically, the rows in the middle are connected together and essentially act as a single point. Similarly, the columns to the left and right of the breadboard are connected together. The rows are where you will be connecting most of your components and the columns are usually used for power and ground.
 
 ![A breadboard](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.2.jpg)  
 Figure 0.2: A standard breadboard
 
 #### Ohm's Law
 
-Ohm's Law is as follows: V = I * R, where V is voltage, I is current and R is resistance. In other words, The voltage drop across 2 points is proportional to the current flowing between those points and the resistance between the points. This formula (perhaps the most important in all of electronics) is extremely useful for most simple circuits, and for all the circuits being built today. The linear relation between V and I or V and R means that if we know any of the two values of a circuit, we can calculate all parameters that define how it works. We also have the power equation: P = V * I = I^2*R = V^2 / R, where P is power. The power value in an LED will determine how bright it shines and in a resistor, how much heat it will dissipate.
+Ohm's Law is as follows: V = I * R, where V is voltage, I is current and R is resistance. In other words, the voltage drop across 2 points is proportional to the current flowing between those points and the resistance between the points. This formula (perhaps the most important in all of electronics) is extremely useful for most simple circuits and for all the circuits being built today. The linear relation between V and I or V and R means that if we know any of the two values of a circuit, we can calculate all parameters that define how it works. We also have the power equation: P = V * I = I^2*R = V^2 / R, where P is power. The power value in an LED will determine how bright it shines and in a resistor, how much heat it will dissipate.
 
 #### Circuits in Series and Parallel
 
@@ -67,14 +67,15 @@ Looking at the schematic in Figure 0.3 you can see that the LED and resistor are
 ![A circuit in series](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.3.png)  
 Figure 0.3: An LED and resistor in series
 
-Looking at the schematic in Figure 0.4 you can see that the resistor and capacitor are in parallel in the circuit diagram. On a breadboard components in parallel need to share both rows as points of contact. When components share rows in this way, current must flow into both of them at the same time, this making the connection a parallel one.
+Looking at the schematic in Figure 0.4 you can see that the resistor and capacitor are in parallel in the circuit diagram. On a breadboard components in parallel need to share both rows as points of contact. When components share rows in this way, current must flow into both of them at the same time, thus making the connection a parallel one.
 
 ![A circuit in parallel](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.4.png)  
 Figure 0.4: 2 resistors in parallel
 
 ##### Exercises
 
-1.1. Build the circuit in Figure 0.3 and watch the LED come to life. 
+1.1. Build the circuit in Figure 0.3 and watch the LED come to life. For our LEDs, any resistor value greater than 100 Ohms should work in these exercises, but the larger the resistance the less bright the LED will be! Too little resistance and the LED could burn out. If you burn out an LED it's no problem, just let a HURC member know and we'll get you a new one!
+
 1.2. Kirchhoff's current law may be just as important as Ohms law in circuit analysis. It basically means that the amount of current entering a junction is equal to the current exiting the junction. That is Σ I = 0. In simpler terms, this law says that the amount of current entering a set of parallel components does not have to be equal; current splits. Voltage on the other hand is the same. Thus, the power that a certain component gets is affected by whether or not it is in series with something else. Build the circuit in Figure 0.5. Now what happened to the brightness of the LED?
 
 ![An LED in parallel with 2 resistors in series](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.5.png)  
@@ -87,7 +88,7 @@ Figure 0.6: An LED and 2 resistors in parallel
 
 #### Measuring resistance, voltage and current
 
-A multimeter is used to measure the V, I, and R -values at certain points in a circuit. Instead of using multiple separate devices, you can simply turn the dial on a multimeter to turn it into a voltmeter, ammeter or some other measurement device. The way multimeters measure voltage, current, and resistance are fundamentally different. A voltmeter must be placed in parallel to what you want to measure in order to find the voltage. An ammeter on the other hand must be placed in series with the circuit; the best way to do so is to pretend that it is another resistor. In Figure 0.7 you can see how a voltmeter and ammeter are placed properly in order to measure voltage or current. In order to measure the resistance of an element, you have to connect the multimeter in parallel to the component, Similarly to how you would measure voltage.
+A multimeter is used to measure the V, I, and R -values at certain points in a circuit. Instead of using multiple separate devices, you can simply turn the dial on a multimeter to turn it into a voltmeter, ammeter or some other measurement device. The way multimeters measure voltage, current, and resistance are fundamentally different. A voltmeter must be placed in parallel to what you want to measure in order to find the voltage. An ammeter on the other hand must be placed in series with the circuit; the best way to do so is to pretend that it is another resistor. In Figure 0.7 you can see how a voltmeter and ammeter are placed properly in order to measure voltage or current. In order to measure the resistance of an element, you have to connect the multimeter in parallel to the component, similarly to how you would measure voltage.
 
 ![How to properly connect a voltmeter and ammeter](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/fig%200.7.png)  
 Figure 0.7: How to properly connect a voltmeter and ammeter
@@ -100,7 +101,7 @@ Figure 0.7: How to properly connect a voltmeter and ammeter
 
 2.3. Now rebuild the circuit from Figure 0.6 and make similar measurements. What do you notice? Can you explain what you see?
 
-Hopefully by now you have realized the difference between components in parallel and components in series. When in series, V will change at every interval, but current will stay the same. When in parallel, V will stay constant throughout, but current will change depending on what branch of the parallel tree you are measuring.
+Hopefully you have learned the difference between components in parallel and components in series. When in series, V will change at every interval, but current will stay the same. When in parallel, V will stay constant throughout, but current will change depending on what branch of the parallel tree you are measuring.
 
 #### Voltage Divider
 
@@ -117,17 +118,17 @@ Figure 0.8: A standard voltage divider
 
 3.3. Now return R1 to its original value and replace R2 with a value 100 times bigger than R1. What is the voltage drop across AB?
 
-As you have probably guessed by now, there is a linear relationship between the input voltage and output voltage, where the resistance are the slope. From our observations of the output voltage and the LED, we can see that when R2 » R1, the output voltage is highest, and when R1 » R2 the output voltage is lowest. The formula for a voltage divider circuit is the following: Vout = Vin * R2/(R1+R2).
+As you have probably guessed by now, there is a linear relationship between the input voltage and output voltage, where the resistance is the slope. From our observations of the output voltage and the LED, we can see that when R2 >> R1, the output voltage is highest, and when R1 >> R2 the output voltage is lowest. The formula for a voltage divider circuit is the following: Vout = Vin * R2/(R1+R2).
 
 ### Coding
 
-Now that you know the basics of designing an electric circuit, it's time to learn basic arduino coding. Once again, if you already feel comfortable with any of the material covered, feel free to skip it.
+Now that you know the basics of designing an electric circuit, it's time to learn basic Arduino/Teensy coding. Once again, if you already feel comfortable with any of the material covered, feel free to skip it.
 
 In this section, we will review the basic building blocks of an Arduino sketch (the common name of an Arduino program), and work through several examples that will highlight these ideas.
 
-First thing you have to do is familiarize yourself with the arduino board. Please review [this tutorial](http://arduino.cc/en/Guide/Board?from=Tutorial) for a general overlay of the Arduino Uno board. Although we may not be using the Uno for our actual projects, understanding the Uno board is key to understanding other Arduino boards. Don't worry if you don't understand everything just yet.
+First thing you have to do is familiarize yourself with the Teensy board. Please review [this tutorial](https://www.pjrc.com/teensy/teensyLC.html) for a general overlay of the Teensy LC board. Although we may not be using the LC for our actual projects, understanding the LC board is key to understanding other Arduino/Teensy boards. Don't worry if you don't understand everything just yet.
 
-Once you've familiarized yourself with the arduino board, open up the arduino IDE that you installed previously.
+Once you've familiarized yourself with the Teensy board, open up the Arduino IDE that you installed previously.
 
 #### The Arduino sketch
 
@@ -146,31 +147,33 @@ void loop () {
 }
 ```
 
-As seen in the comments, the setup function of the Arduino function only runs once, and before any other code is run. The main purpose of this section is to initialize any global variables that might be used later, set up board pins for use (which board pin controls what), etc. The loop function is the main logic function of the Arduino sketch. It does exactly what you would expect it to - it loops! Generally, all the logic of the Arduino sketch is contained in this function.
+As seen in the comments, the setup function only runs once, and before any other code is run. The main purpose of this section is to initialize any global variables that might be used later, set up board pins for use (which board pin controls what), etc. The loop function is the main logic function of the Arduino sketch. It does exactly what you would expect it to - it loops! Generally, all the logic of the Arduino sketch is contained in this function.
 
 #### Blink
 
-Let’s quickly examine pins and writes in action. Head [here](http://www.arduino.cc/en/Tutorial/Blink) and follow the tutorial there. You can find the code already written in your Arduino IDE by going to File>Examples>01.Basics>blink. The next segment will teach you how to load the sketch onto the actual Arduino board.
+Let’s quickly examine pins and writes in action. Head [here](http://www.arduino.cc/en/Tutorial/Blink) and follow the tutorial there. You can find the code already written in your Arduino IDE by going to File>Examples>01.Basics>blink. The next segment will teach you how to load the sketch onto the actual Teensy board.
 
 #### Uploading code
 
-To upload a Arduino sketch from the IDE to the board, simply follow these steps once you have an arduino sketch open:
+To upload a Arduino sketch from the IDE to the board, simply follow these steps once you have an Arduino sketch open:
 
-1. Compile your Arduino sketch using the check mark button in the top toolbar. This will build your sketch code, and check if there are any syntactical issues. If there are, you should fix them now.
+1. Compile your Arduino sketch using the check mark button in the top toolbar. This will build your sketch code and check if there are any syntactical issues. If there are, you should fix them now.
 
 2. Connect the micro-USB end of the USB wire into the board, and the USB end into your computer. If you completed the driver steps, your board should be recognized with no issues.
 
-3. Go to Tools>Board and make sure you have the correct board specified. For this tutorial we are using either the Arduino Uno or Micro. If you're not sure which board you have, ask one of the HURC members.
+3. Go to Tools>Board and make sure you have the correct board specified. For this tutorial we are using the "Teensy LC".
 
 4. Go to Tools>Serial Port, and make sure you have the correct board for your board selected. There generally is only one port, but if there are more, trial and error usually works.
 
-5. Click on the Right Arrow button in the toolbar to upload your code.
+5. *If this is your first time uploading to the Teensy:* click the Checkmark button in the toolbar and then press the pushbutton on the Teensy LC board.
+
+6. Click on the Right Arrow button in the toolbar to upload your code.
 
 #### Syntax
 
 The Arduino IDE uses a custom programming syntax known as INO, which is really just a derivative of C/C++. Because of that, the syntax in Arduino sketches is almost exactly the same is in C or C++ programs. The full supported syntax is listed out in the [Arduino reference](https://www.arduino.cc/en/Reference/HomePage). Make sure you are comfortable with the structure section.
 
-For coding projects in any language, but Ino in specific you have to be able to use:  
+For coding projects in any language, but for INO specifically, you should be able to use:  
 
 1. if and if ... else statements  
 
@@ -188,7 +191,7 @@ For coding projects in any language, but Ino in specific you have to be able to 
 
 8. [Serial Print](https://www.arduino.cc/en/Serial/Print)  
 
-This is a lot to go through right now. If you have any prior experience with coding, then most of this should simply be looking up the new syntax. If you aren't familiar with theses concepts, then don't try to go through all of the reference right now. Instead focus on the aspects that you think will help you solve a particular exercise as you go through this workshop.
+This is a lot to go through right now. If you have any prior experience with coding, then most of this should simply be looking up the new syntax. If you aren't familiar with these concepts, then don't try to go through all of the reference right now. Instead focus on the aspects that you think will help you solve a particular exercise as you go through this workshop.
 
 ##### Exercise 4.1 (Serial Print, strings)
 Write an Arduino sketch to print "Hello World!". Make sure to use correct Arduino sketch layout.
@@ -258,15 +261,15 @@ Write a function that takes a list of strings an prints them, one per line, in a
 \*\*\*\*\*\*\*\*\*  
 \* Hello__ \*  
 \* World__\*  
-\* in_____ \*  
-\* a______\*  
-\* frame__ \*  
+\* in______ \*  
+\* a_______\*  
+\* frame_ \*  
 \*\*\*\*\*\*\*\*\*  
 
 NOTE: Underscores represent spaces.
 Use a separate function for determining the frame width that takes in the list of words as an input and a separate function for printing a line of the frame, that takes in a word and the frame width.
 
-As a final note, here are some links to documentation you may find helpful for configuring and using the pins of the Arduino:
+As a final note, here are some links to documentation you may find helpful for configuring and using the pins of the Arduino (which also work with the Teensy):
 
 1. [PinMode](https://www.arduino.cc/en/Reference/PinMode)
 
@@ -276,18 +279,16 @@ As a final note, here are some links to documentation you may find helpful for c
 
 4. [AnalogRead](https://www.arduino.cc/en/Reference/AnalogRead)
 
-For your reference, we have included a pinout diagram for the Arduino Uno and the Arduino Micro.
-![pinout uno](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/uno_pinout.jpg)
-Figure 0.9: Pinout Diagram for the Arduino Uno R3
+For your reference, we have included a pinout diagram for the Teensy LC.
+![pinout teensy](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/teensy_lc.png)
 
-![pinout uno](https://raw.githubusercontent.com/HarvardURC/Workshops/master/assets/coding_electronics/micro_pinout.png)
-Figure 1.0: Pinout Diagram for the Arduino Micro
+Figure 0.9: Pinout Diagram for the Teensy LC
 
 ## Final Challenge
 
-For this final challenge you will merge the skills you've just learnt. But first you have to learn how to interface with the Arduino microcontroller. A Microcontroller both accepts and outputs current. There are designated pins in the Arduino which accept analog inputs or digital inputs (we will not delve into the details behind the differences). These inputs can then, with a little code, be used to control the output of the Arduino in such a way that we can output the right out amount of voltage to a target location (via a specific output pin). In this next exercise you will explore the magic of analog-digital interfacing. Such interfacing is essential in robotics, because most times robots need to be autonomous or controlled remotely, and a microcontroller like an Arduino can be programmed to control the circuitry in the way that we want it.
+For this final challenge you will merge the skills you've just learnt. But first you have to learned how to interface with the Teensy microcontroller. A Microcontroller both accepts and outputs current. There are designated pins in the Teensy which accept analog inputs or digital inputs (we will not delve into the details behind the differences). These inputs can then, with a little code, be used to control the output of the Teensy in such a way that we can output the right out amount of voltage to a target location (via a specific output pin). In this next exercise you will explore the magic of analog-digital interfacing. Such interfacing is essential in robotics, because most times robots need to be autonomous or controlled remotely, and a microcontroller like a Teensy can be programmed to control the circuitry in the way that we want it.
 
-Read the following to know how to read from and write to an Arduino pin:
+Read the following to know how to read from and write to an Arduino/Teensy pin:
 
 1. [PinMode](https://www.arduino.cc/en/Reference/PinMode)
 
