@@ -1,6 +1,6 @@
 # Computer Aided Design with SOLIDWORKS
 
-In this workshop you will learn the basics of CAD (computer aided design) and modeling 3D objects in SOLIDWORKS. You will start using SOLIDWORKS'own tutorials, which we find do a pretty good job of introducing basic methods and techniques. Once you've completed the SOLIDWORKS tutorials, you will have a chance to practice building a real part, which you will actually end up using for your line-following robot you build for the comp!
+In this workshop you will learn the basics of CAD (computer aided design) and modeling 3D objects in SOLIDWORKS. You will start using SOLIDWORKS'own tutorials, which we find do a pretty good job of introducing basic methods and techniques. Once you've completed the SOLIDWORKS tutorials, you will have a chance to practice building a real part, which you may actually end up using in your line-following robot for the comp!
 
 ## Starting Tutorials
 
