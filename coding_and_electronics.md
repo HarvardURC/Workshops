@@ -40,7 +40,7 @@ First lets dive in to the world of electrical circuits. If you already feel very
 
 The first thing you need to know before getting started are the components most used in electronic circuits and how they work (at a very high level). The following are the components that you will need to know in order to begin building simple circuits (and, subsequently, simple robots). Figure 0.1 shows how a component is represented in a circuit schematic, and directly below are pictorial representations.
 
-1. Power sources - A power source provides the voltage (Volts) and current (Amperes) necessary to drive a circuit. At its core, it is a source of electric potential, and without it a circuit would be useless. Power sources can take the form of batteries, power supplies, or microcontrollers (an Arduino has a max pin output of 5V, and our Teensy LC has a max pin output of 3.3V). For simplicity, we will be using a DC power source.
+1. Power sources - A power source provides the voltage (Volts) and current (Amperes) necessary to drive a circuit. At its core, it is a source of electric potential, and without it a circuit would be useless. Power sources can take the form of batteries, power supplies, or microcontrollers. For simplicity, we will be using the Teensy LC as a power source. Connect the micro-USB end of the USB wire into the Teensy, and the USB end into your computer. Now, the "3V" pin on the Teensy can be used like a 3.3V power source!
 2. Resistors - Resistors (Ohms), to put it simply, resist. They impede the flow of electrons through a circuit and subsequently create a voltage drop. A voltage drop is a change in the amount of voltage in the circuit, allowing one to control how a circuit behaves fairly accurately. One thing to know is that current follows the path of least resistance, thus if a current has a choice between a 500 Ohm resistor and a 10000 Ohm resistor, most of it will flow through the 500 ohm resistor.
 3. Potentiometers (aka pots) - Potentiometers are essential variable resistors. While a resistor can only have a fixed resistance, potentiometers can be tuned to any resistance within its range.
 4. LEDs - LED stands for Light Emitting Diode. In its simplest form, it turns current into light and heat, while at the same time acting like a resistor and producing a voltage drop. Because LEDs are diodes, it is important to know that they only work if connected in the proper direction (the longer leg is the positive end, the shorter leg is the negative end).
@@ -258,13 +258,15 @@ Call the first function in the second function so that after the Fibonacci array
 
 Write a function that takes a list of strings an prints them, one per line, in a rectangular frame. For example the list ["Hello", "World", "in", "a", "frame"] gets printed as:
 
-\*\*\*\*\*\*\*\*\*  
-\* Hello__ \*  
-\* World__\*  
-\* in______ \*  
-\* a_______\*  
-\* frame_ \*  
-\*\*\*\*\*\*\*\*\*  
+```
+*********
+*Hello__*  
+*World__*  
+*in_____*  
+*a______*  
+*frame__*  
+********* 
+```
 
 NOTE: Underscores represent spaces.
 Use a separate function for determining the frame width that takes in the list of words as an input and a separate function for printing a line of the frame, that takes in a word and the frame width.
