@@ -311,3 +311,5 @@ For this challenge you should find one or two more participants to pair up with.
 The counter should use the 3 LED's to display the numbers 0 to 7 in binary (000, 001, 010, 011, 100, 101, 110, 111) and the 2 pushbuttons to either increment and decrement the count. You should code to protect against over and underflow (if the user tries to count to higher than 7 or lower than 0, the count should not change).
 
 This challenge might prove to be quite difficult if you don't have a lot of electronics or coding experience. Don't hesitate to ask a HURC member for help. We're here to mentor you.
+
+## We hope you enjoyed! Please fill out the workshop feedback/attendance form [here](https://goo.gl/forms/3C1EO0wlaPoYYVhZ2)
