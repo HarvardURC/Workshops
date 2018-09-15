@@ -17,3 +17,5 @@ The parts are aligned by tabs and slots and held together by 4-40 screws and squ
 As CAD practice, model the parts for the sensor mounts and create an Assembly of the sensor mount. Show the file to one of the HURC members when you've finished.
 
 If you need help, ask one of the HURC members.
+
+## We hope you enjoyed! Please fill out the workshop feedback/attendance form [here](https://goo.gl/forms/G8Pa9rdzvOm1bNML2)
