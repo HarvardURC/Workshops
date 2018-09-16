@@ -18,7 +18,7 @@ Before starting this workshop, you should have the following parts:
 
 The first step that needs to be completed before any coding can be done is to set up the correct environment. Since we will primarily be using Arduino or Teensy boards to program our robots, it is ideal for us to develop in the Arduino IDE. IDE is short for Integrated Development Environment, which contains not only the text editor we need to write our code in, but also a compiler to build our code, and communication protocols with the chip that we are programming. Arduino/Teensy boards are small boards that contain a microcontroller and easy to use interfaces for programming the processor and using it to control electronics. The Arduino IDE will allow us to program *both Arduino and Teensy boards*. Follow the steps below to get the Arduino IDE installed:
 
-1. Click [here](http://arduino.cc/en/Main/Software) to access the download page.
+1. Click [here](https://www.arduino.cc/en/Main/OldSoftwareReleases) to access the download page (we're using a slightly older version, 1.8.6, to maintain Teensy support).
 
 2. Download your appropriate installer, depending on what operating system your machine has.
 
